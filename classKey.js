@@ -1,4 +1,4 @@
-const contenedor = document.querySelectorAll(".flex-container");
+const contenedor = document.querySelector(".flex-container");
 
 // const text_title = document.getElementById("title");
 // const text_model = document.getElementById("model");
@@ -9,6 +9,31 @@ const contenedor = document.querySelectorAll(".flex-container");
 // let text1 = text_title.value;
 // let text2 = text_model.value;
 // let text3 = text_price.value;
+
+
+let items = [];
+
+const addItem = (ev) => {
+    ev.preventDefault();
+    let itemJSON = {
+        title: document.getElementById('title').value,
+        model: document.getElementById('model').value,
+        price: document.getElementById('price').value
+    }
+
+    items.push(itemJSON);
+    console.log(items);
+    document.querySelector('.input-form').reset();
+
+    crearElementoLlave(items[0]['title'],items[0]['model'],items[0]['price']);
+    console.log(items[0]['title'],items[0]['model'],items[0]['price']);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('create').addEventListener('click', addItem);
+
+});
+
 
 const crearLlave = (title, model, price) => {
     img = `<img class="llave-img", src="davy_jones_key.jpg">`;
@@ -26,25 +51,3 @@ const crearElementoLlave = (title, model, price) => {
     div.innerHTML = key[0] + key[1] + key[2] + key[3];
     contenedor.appendChild(div);
 }
-
-
-let items = [];
-
-const addItem = (ev) => {
-    ev.preventDefault();
-    let item = {
-        title: document.getElementById('title').value,
-        model: document.getElementById('model').value,
-        price: document.getElementById('price').value
-    }
-
-    items.push(item);
-    console.log(items);
-    document.querySelector('.input-form').reset();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('create').addEventListener('click', addItem);
-    console.log(items);
-
-});
