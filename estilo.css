@@ -1,5 +1,50 @@
+body {
+	overflow-x: hidden;
+	margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+}
+
+.header {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px 32px 32px 0;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+
+
+.data-input {
+	margin-top: 0;
+	padding-top: 0;
+	height: 70px;
+	background-color: #0a0a23;
+	color: #fff;
+	font-size: 1.2rem;
+    border-bottom: 4px solid #fdb347;
+}
+
+.input-form {
+	padding: 20px;
+	text-align: center;
+}
+
+.input-item {
+	height: 25px;
+	background-color:#f5f6f7;
+	border: none;
+	color: #0a0a23;
+	font-size: 1em;
+}
+
 
 .flex-container {
+	margin: 30px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -7,25 +52,25 @@
 	font-family: sans-serif;
 }
 
-body {
-	overflow-x: hidden;
-}
-
 .flex-item {
 	flex-grow: 1;
 	margin: 20px;
-	max-width: 300px;
-	border: 2px solid #333;
+	max-width: 200px;
+	background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 	padding: 0 20px;
+    overflow: hidden;
+	cursor: pointer;
 }
 
-.flex-item:hover {
-	border-color: #71a154;
-	box-shadow: 0px 0px 30px #317124
+.flex-item:hover .llave-img {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .flex-item:focus {
-	border-color: #71a154;
-	box-shadow: 0px 0px 30px #317124
+    border: 2px solid rgb(82, 168, 238);
+    box-shadow: 1px 1px 15px rgba(82, 168, 238); 
 }
 
 h2,h3 {
@@ -41,21 +86,32 @@ p b {
 }
 
 .llave-img {
-	width: 300px;
+	width: 200px;
+	height: 300px;
+	object-fit: contain;
+    transition: 0.6s;
 }
 
 
-form {
+.items-form {
 	width: 100%;
 	text-align: center;
-	padding: 50px;
+	padding: 50px 50px 50px 0;
 }
 
-input[type="submit"]{
-	background: #71a154;
+.submit-button {
 	color: #fff;
 	border: none;
-	padding: 12px 36px;
-	font-size: 17px;
-	letter-spacing: 1px
+	padding: 7px 25px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.enter {
+	background: #2f9ed1;
+}
+
+.send {
+	background: #71a154;
 }
