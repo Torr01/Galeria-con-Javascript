@@ -25,7 +25,7 @@ body {
 	height: 70px;
 	background-color: #0a0a23;
 	color: #fff;
-	font-size: 1.2rem;
+	font-size: 0.9rem;
     border-bottom: 4px solid #fdb347;
 }
 
@@ -64,8 +64,13 @@ body {
 	cursor: pointer;
 }
 
+.flex-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+	transition: 0.6s;
+}
+
 .flex-item:hover .llave-img {
-    transform: scale(1.1);
+    transform: scale(0.93);
     cursor: pointer;
 }
 .flex-item:focus {
